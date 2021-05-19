@@ -27,7 +27,7 @@ public class Bird : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //새충돌시 죽음
-        GameManager.instance.ShowGameOver(false);
+        GameManager.instance.ShowGameOver(true);
     }
 
 

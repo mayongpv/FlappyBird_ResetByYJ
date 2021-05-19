@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        gameOverUI.SetActive(false);
     }
 
     internal void ShowGameOver(bool active)
