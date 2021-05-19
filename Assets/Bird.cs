@@ -12,7 +12,7 @@ public class Bird : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    float forceY = 100;
+   public float ForceY = 100;
     void Update()
     {
         //마우스 클릭 혹은 스페이스바 눌렀을때 작동시키기
@@ -20,7 +20,7 @@ public class Bird : MonoBehaviour
         {
             Vector2 force;
             force.x = 0;
-            force.y = forceY;
+            force.y = ForceY;
             rigidbody2D.AddForce(force); //()안의 자리에는 vector가 들어가야 하는데, 여기서 vector2를 force로 이름 붙였다.
         }
 
