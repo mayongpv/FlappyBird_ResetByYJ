@@ -18,6 +18,8 @@ public class Column : MonoBehaviour
     public float spawnYmin = 4;
     public float spawnYmax = 4;
 
+//와아아아아ㅏ 전혀 모르겠는걸???? ^^
+
     IEnumerator Start()
     {
         while (true)
