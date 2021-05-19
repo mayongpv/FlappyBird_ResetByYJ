@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Bird.cs" />
     <Compile Include="Assets\Scroll.cs" />
+    <Compile Include="Assets\Reposition.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
