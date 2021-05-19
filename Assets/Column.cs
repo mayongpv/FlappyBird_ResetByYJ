@@ -33,7 +33,8 @@ public class Column : MonoBehaviour
             Instantiate(column, pos, column.transform.rotation);
 
             //3초 간격으로 배치
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay + Random.Range(-randomdelay, -randomdelay));
+
         }
     }
 
