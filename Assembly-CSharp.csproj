@@ -60,6 +60,8 @@
     <Compile Include="Assets\Bird.cs" />
     <Compile Include="Assets\Reposition.cs" />
     <Compile Include="Assets\Column.cs" />
+    <Compile Include="Assets\TimeController.cs" />
+    <Compile Include="Assets\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
