@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{75D37CFD-5068-6285-E4A3-121C7E6A7146}</ProjectGuid>
+    <ProjectGuid>{14E02131-BA9E-FAFC-17E4-B98F6BED159C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,9 +56,10 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bird.cs" />
     <Compile Include="Assets\Scroll.cs" />
+    <Compile Include="Assets\Bird.cs" />
     <Compile Include="Assets\Reposition.cs" />
+    <Compile Include="Assets\Column.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />
