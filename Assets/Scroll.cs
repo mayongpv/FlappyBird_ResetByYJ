@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Scroll : MonoBehaviour
 {
-    public float SppedX = -2;
+    public float SppedX = -1;
 
     // Update is called once per frame
     void Update()

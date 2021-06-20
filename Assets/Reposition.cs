@@ -1,17 +1,17 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Reposition : MonoBehaviour
 {
-    //¹è°æÀÌ -¹æÇâÀ¸·Î ÀÌµ¿ÇÑ´Ù.
-    //¹è°æÀÌ ´ëÃæ ¹è°æ ±æÀÌ¸¸Å­ ¿ÞÂÊÀ¸·Î ÀÌµ¿ÇßÀ» ¶§,
-    //¹è°æÀÇ ±æÀÌ *2 ¸¸Å­ µÇ´Â ÁöÁ¡ (+¹æÇâ)À¸·Î ÀÌµ¿ÇÑ´Ù. 
-    //ÀÌµ¿ÀÇ ÃÖ¼Ò°ª(Áï, Á¦ÀÏ ¸¹ÀÌ ¿ÞÂÊÀ¸·Î ÀÌµ¿ÇßÀ» ¶§. À» minX¶ó°í ÁöÁ¤Çß´Ù.
-    //Ã¹¹øÂ° ¹è°æ Ãâ¹ß ÁöÁ¡ x = 7, µÎ¹øÂ° ¹è°æ Áß°£ Á¤µµ°¡ 25 -> ±×·¡¼­ ´ëÃæ -30Á¤µµ¸¦ ÃÖ¼Ò°ªÀ¸·Î Á¤Çß±¸³ª. 
+    //ë°°ê²½ì´ -ë°©í–¥ìœ¼ë¡œ ì´ë™í•œë‹¤.
+    //ë°°ê²½ì´ ëŒ€ì¶© ë°°ê²½ ê¸¸ì´ë§Œí¼ ì™¼ìª½ìœ¼ë¡œ ì´ë™í–ˆì„ ë•Œ,
+    //ë°°ê²½ì˜ ê¸¸ì´ *2 ë§Œí¼ ë˜ëŠ” ì§€ì  (+ë°©í–¥)ìœ¼ë¡œ ì´ë™í•œë‹¤. 
+    //ì´ë™ì˜ ìµœì†Œê°’(ì¦‰, ì œì¼ ë§Žì´ ì™¼ìª½ìœ¼ë¡œ ì´ë™í–ˆì„ ë•Œ. ì„ minXë¼ê³  ì§€ì •í–ˆë‹¤.
+    //ì²«ë²ˆì§¸ ë°°ê²½ ì¶œë°œ ì§€ì  x = 7, ë‘ë²ˆì§¸ ë°°ê²½ ì¤‘ê°„ ì •ë„ê°€ 25 -> ê·¸ëž˜ì„œ ëŒ€ì¶© -30ì •ë„ë¥¼ ìµœì†Œê°’ìœ¼ë¡œ ì •í–ˆêµ¬ë‚˜. 
     public float minX = -30f;
-    //¸¸¾à x°¡ -30º¸´Ù ´õ ÀÛ¾ÆÁö¸é µÎ¹è ÀÌµ¿, 
-    //+ Áï x°¡ ¿òÁ÷ÀÎ ÁöÁ¡ÀÌ  minX °ªº¸´Ù ÀÛ¾ÆÁö¸é ÀÌµ¿ÇÑ´Ù µÎ¹è ±æÀÌ¸¸Å­
+    //ë§Œì•½ xê°€ -30ë³´ë‹¤ ë” ìž‘ì•„ì§€ë©´ ë‘ë°° ì´ë™, 
+    //+ ì¦‰ xê°€ ì›€ì§ì¸ ì§€ì ì´  minX ê°’ë³´ë‹¤ ìž‘ì•„ì§€ë©´ ì´ë™í•œë‹¤ ë‘ë°° ê¸¸ì´ë§Œí¼ 
 
     private void Update()
     {

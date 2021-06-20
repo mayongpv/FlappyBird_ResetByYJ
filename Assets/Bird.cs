@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,19 +15,24 @@ public class Bird : MonoBehaviour
    public float ForceY = 100;
     void Update()
     {
-        //¸¶¿ì½º Å¬¸¯ È¤Àº ½ºÆäÀÌ½º¹Ù ´­·¶À»¶§ ÀÛµ¿½ÃÅ°±â
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) //¸¸¾à ½ºÆäÀÌ½º È¤Àº ¸¶¿ì½º ¿ŞÂÊ ÇÏ¸é y°¡ ÈûÀ» ¹Ş´Â´Ù
+        //ë§ˆìš°ìŠ¤ í´ë¦­ í˜¹ì€ ìŠ¤í˜ì´ìŠ¤ë°” ëˆŒë €ì„ë•Œ ì‘ë™ì‹œí‚¤ê¸°
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) //ë§Œì•½ ìŠ¤í˜ì´ìŠ¤ í˜¹ì€ ë§ˆìš°ìŠ¤ ì™¼ìª½ í•˜ë©´ yê°€ í˜ì„ ë°›ëŠ”ë‹¤
         {
             Vector2 force;
             force.x = 0;
             force.y = ForceY;
-            rigidbody2D.AddForce(force); //()¾ÈÀÇ ÀÚ¸®¿¡´Â vector°¡ µé¾î°¡¾ß ÇÏ´Âµ¥, ¿©±â¼­ vector2¸¦ force·Î ÀÌ¸§ ºÙ¿´´Ù.
+            rigidbody2D.AddForce(force); //()ì•ˆì˜ ìë¦¬ì—ëŠ” vectorê°€ ë“¤ì–´ê°€ì•¼ í•˜ëŠ”ë°, ì—¬ê¸°ì„œ vector2ë¥¼ forceë¡œ ì´ë¦„ ë¶™ì˜€ë‹¤.
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //»õÃæµ¹½Ã Á×À½
-        GameManager.instance.ShowGameOver(true);
+        //ìƒˆì¶©ëŒì‹œ ì£½ìŒ
+        GameManager.instance.SetGameOver();
+    }
+
+    private void OnTiggerEnter2D(Collider2D collider2D)
+    {
+        GameManager.instance.AddScore();
     }
 
 
@@ -35,14 +40,14 @@ public class Bird : MonoBehaviour
     //}
 
 
-    ////³¯°³ ÆŞ·°ÀÌ´Â ¾Ö´Ï¸ŞÀÌ¼Ç ÇÏÀÚ.
+    ////ë‚ ê°œ í„ëŸ­ì´ëŠ” ì• ë‹ˆë©”ì´ì…˜ í•˜ì.
     //animator.Play("Flap", 0, 0);
     //    }
     //}
 
 
 
-    //    //// ½ºÅ©·Ñ ÇÏ´Â°Íµé ´Ù ¸ØÃß±â
+    //    //// ìŠ¤í¬ë¡¤ í•˜ëŠ”ê²ƒë“¤ ë‹¤ ë©ˆì¶”ê¸°
     //    //animator.Play("Die", 0, 0);
     //}
 
