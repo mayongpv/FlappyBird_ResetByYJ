@@ -56,14 +56,22 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Column.cs" />
-    <Compile Include="Assets\Script\Scroll.cs" />
-    <Compile Include="Assets\Script\TimeController.cs" />
-    <Compile Include="Assets\Script\Bird.cs" />
-    <Compile Include="Assets\Script\GameManager.cs" />
-    <Compile Include="Assets\Script\Reposition.cs" />
-    <Compile Include="Assets\Script\CodephyBird.cs" />
+    <Compile Include="Assets\Script\Common\Column.cs" />
+    <Compile Include="Assets\Script\Common\Scroll.cs" />
     <Compile Include="Assets\Free Asset - 2D Handcrafted Art\Scripts\CamerController.cs" />
+    <Compile Include="Assets\Script\Common\CodephyBird.cs" />
+    <Compile Include="Assets\Script\Common\Bird.cs" />
+    <Compile Include="Assets\Script\Common\GameManager.cs" />
+    <Compile Include="Assets\Script\Common\Reposition.cs" />
+    <Compile Include="Assets\Script\Common\GOHelper.cs" />
+    <Compile Include="Assets\Script\Common\ListItemMonobehaviour.cs" />
+    <Compile Include="Assets\Script\Common\MyExtension.cs" />
+    <Compile Include="Assets\Script\Common\EditorOption.cs" />
+    <Compile Include="Assets\Script\Common\GORotate.cs" />
+    <Compile Include="Assets\Script\Common\EditorButtonHelper.cs" />
+    <Compile Include="Assets\Script\Common\TimeController.cs" />
+    <Compile Include="Assets\Script\Common\ChangeTextureOffset.cs" />
+    <Compile Include="Assets\Script\Common\GODestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Flappy Bird Style\_ReadMe.txt" />

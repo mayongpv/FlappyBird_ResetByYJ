@@ -1,15 +1,8 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class Column : MonoBehaviour
 {
-    //¾ÀÀÌ ½ÃÀÛµÇ¸é
-    //·£´ýÀ¸·Î »ý¼ºÇÏ±â - ·£´ý ÇÔ¼ö ÇÊ¿ä
-    //Y °ªÀÇ ¹üÀ§ ÀÖ¾î¾ßÇÔ. 
-    //x °ªÀº °íÁ¤°ª?
-
-
-    //// 3ÃÊ °£°ÝÀ¸·Î ¹èÄ¡ : ÄÚ¸£Æ¾ ÇÔ¼ö »ç¿ëÇÏ±â
 
     public GameObject column;
     public float delay = 3f;
@@ -18,21 +11,19 @@ public class Column : MonoBehaviour
     public float spawnYmin = 4;
     public float spawnYmax = 4;
 
-//¿Í¾Æ¾Æ¾Æ¾Æ¤¿ ÀüÇô ¸ð¸£°Ú´Â°É???? ^^
 
     IEnumerator Start()
     {
         while (true)
         {
             Vector3 pos;
+            pos.z = 0;
             pos.x = spawnX;
             pos.y = Random.Range(spawnYmin, spawnYmax)  ;
-            pos.z = 0;
-
 
             Instantiate(column, pos, column.transform.rotation);
 
-            //3ÃÊ °£°ÝÀ¸·Î ¹èÄ¡
+            //3ì´ˆ ê°„ê²©ìœ¼ë¡œ ë°°ì¹˜
             yield return new WaitForSeconds(delay + Random.Range(-randomdelay, -randomdelay));
 
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
-{
+{ 
 
     new public Rigidbody2D rigidbody2D;
     public Animator animator;
@@ -13,8 +13,7 @@ public class Bird : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-
-    public float ForceY = 100;
+    public float forceY = 100;
     void Update()
     {
         //마우스 클릭 혹은 스페이스바 눌렀을때 작동시키기
@@ -24,7 +23,8 @@ public class Bird : MonoBehaviour
             {
                 Vector2 force;
                 force.x = 0;
-                force.y = ForceY;
+                force.y = forceY;
+                rigidbody2D.velocity = Vector2.zero;
                 rigidbody2D.AddForce(force); //()안의 자리에는 vector가 들어가야 하는데, 여기서 vector2를 force로 이름 붙였다.
 
                 //날개 펄럭이는 애니메이션 하자
@@ -32,14 +32,24 @@ public class Bird : MonoBehaviour
             }
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        OnDie(collision);
+    }
+    private void OnDie(Collision2D collision)
+    {
         //새죽음
-        animator.Play("Die", 0, 0); //1이면 애니메이션 끝
+
+    
         //게임오버 UI 표시
         GameManager.instance.SetGameOver();
 
-        //스크롤 하는 것들 다 멈추기
+        //죽는 애니메이션 하자
+        animator.Play("Die", 0, 0); //1이면 애니메이션 끝
+
+        //스크롤 하는것들 다 멈추기
+        GameManager.instance.scrollSpeedXMultiply = 0;
     }
 
     private void OnTiggerEnter2D(Collider2D collider2D)

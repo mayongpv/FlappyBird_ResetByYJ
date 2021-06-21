@@ -31,7 +31,7 @@ public class CodephyBird : Bird //버드를 상속받음! -> Bird 스크립트�
         {
             if (Time.time > 0.7f)
             {
-                acceleration = ForceY;
+                acceleration = forceY;
                 //날개 펄럭이는 애니메이션 하자
                 animator.Play("Flap", 0, 0); //1이면 애니메이션 끝
             }
